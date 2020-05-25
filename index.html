@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Transmit</title>
+        <link rel="shortcut icon" type="image/png" href="./fav/fav-16.png"/>
+		<link rel="shortcut icon" type="image/png" href="./fav/fav-32.png"/>
+		<link rel="shortcut icon" type="image/png" href="./fav/fav-64.png"/>
+        <link rel="shortcut icon" type="image/png" href="./fav/fav-128.png"/>
+        <link rel="shortcut icon" type="image/svg" href="./fav/fav-svg.svg"/>
+		<meta charset="UTF-8">
+		<meta name="google" content="notranslate">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<link href="https://fonts.googleapis.com/css?family=Assistant|IBM+Plex+Sans|Oxygen|Ubuntu&display=swap" rel="stylesheet">
+		<link href="./style.css" type="text/css" rel="stylesheet">
+		<link href="./button.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main-window">
+			<div>
+				<br>
+				<b><nobr style="font-size: 38px;" id="name">{{name}}</nobr></b>
+				<br class="mobile-spacer"><br class="mobile-spacer">
+				<button id="download" style="--content: 'Transmit'" onclick="download()">
+					<div class="left"></div>
+						Transmit
+					<div class="right"></div>
+				</button>
+				<br class="mobile-spacer">
+			</div>
+			<br>
+			<br class="mobile-spacer">
+			<hr>
+			<br>
+			<table class="details">
+				<tr>
+					<th>
+						Last Modification:&#160;
+					</th>
+					<td>
+						<nobr id="modified">{{modified}}</nobr>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Date Added:
+					</th>
+					<td>
+						<nobr id="added">{{added}}</nobr>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Version:
+					</th>
+					<td>
+						<nobr id="version">{{version}}</nobr>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						File Type:
+					</th>
+					<td>
+						<div class="tooltip"><novr id="type">{{type}}</novr>
+							<span class="tooltiptext" id="type_tt">Tooltip text</span>
+						  </div>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Target OS:
+					</th>
+					<td>
+						<nobr id="os">{{os}}</nobr>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Author:
+					</th>
+					<td>
+						<nobr id="author">{{author}}</nobr>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+	
+	<noscript>
+		<style>
+			button#download {
+				visibility: hidden;
+			}
+		</style>
+	</noscript>
+</html>
+
+<script type="text/javascript" src="./js/downloads.js"></script>
+<script type="text/javascript" src="./js/fileTypes.js"></script>
+<script type="text/javascript" src="./script.js"></script>
